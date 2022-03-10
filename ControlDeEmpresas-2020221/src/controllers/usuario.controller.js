@@ -177,7 +177,7 @@ function obtenerNombreEmpleadoXEmpresa(req, res) {
     var productoId = req.params.idUsuario;
     var parametros = req.body;
 
-    Productos.aggregate([
+    Empresa.aggregate([
         {
             $match: { "_id": mongoose.Types.ObjectId(productoId) }
         },
